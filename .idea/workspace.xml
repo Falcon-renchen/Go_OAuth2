@@ -2,17 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7220acc2-02f5-4d8e-a837-74dd0cd52377" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OAuth2_01/client/a.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OAuth2_01/public/a-index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OAuth2_01/public/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OAuth2_01/server/s.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OAuth2_01/utils/middlewares.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OAuth2_01/utils/sessionutil.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OAuth2_01/utils/userInfo.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dump20210413.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OAuth2_02/client/a.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OAuth2_02/models/Source.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OAuth2_02/models/UserModel.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OAuth2_02/public/a-index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OAuth2_02/public/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OAuth2_02/public/reg.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OAuth2_02/server/s.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OAuth2_02/utils/dbutil.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OAuth2_02/utils/middlewares.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OAuth2_02/utils/sessionutil.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OAuth2_02/utils/userrepo.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OAuth2_02/utils/userutil.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,26 +55,31 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="GO_FMT" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="configurable.Global.GOPATH.is.expanded" value="true" />
     <property name="configurable.Project.GOPATH.is.expanded" value="true" />
     <property name="go.import.settings.migrated" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/OAuth2_01/public" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/OAuth2_02/server" />
+      <recent name="$PROJECT_DIR$/OAuth2_02/client" />
       <recent name="$PROJECT_DIR$/OAuth2_01/server" />
       <recent name="$PROJECT_DIR$/OAuth2_01/client" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/OAuth2_02" />
       <recent name="$PROJECT_DIR$/OAuth2_01/public" />
       <recent name="$PROJECT_DIR$/OAuth2_01" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Build.go build OAuth2/OAuth2_01/client">
+  <component name="RunManager" selected="Go Build.go build s.go">
     <configuration name="go build OAuth2/OAuth2_01" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="OAuth2" />
       <working_directory value="$PROJECT_DIR$" />
@@ -97,8 +107,28 @@
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
+    <configuration name="go build OAuth2/OAuth2_02/client" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="OAuth2" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/OAuth2_02/client/a.go" />
+      <package value="OAuth2/OAuth2_02/client" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build s.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="OAuth2" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/OAuth2_02/server/s.go" />
+      <package value="OAuth2" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build s.go" />
+        <item itemvalue="Go Build.go build OAuth2/OAuth2_02/client" />
         <item itemvalue="Go Build.go build OAuth2/OAuth2_01/client" />
         <item itemvalue="Go Build.go build OAuth2/OAuth2_01/server" />
         <item itemvalue="Go Build.go build OAuth2/OAuth2_01" />
@@ -110,6 +140,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="token oauth" />
+    <option name="LAST_COMMIT_MESSAGE" value="token oauth" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
@@ -124,21 +156,25 @@
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="1274" y="194" key="#go_build_OAuth2/OAuth2_01/0.23.1920.1057@0.23.1920.1057" timestamp="1618281461775" />
-    <state width="684" height="302" key="GridCell.Tab.0.bottom" timestamp="1618284398151">
+    <state x="1142" y="149" key="CommitChangelistDialog2" timestamp="1618284765399">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="684" height="302" key="GridCell.Tab.0.bottom/0.23.1920.1057@0.23.1920.1057" timestamp="1618284398151" />
-    <state width="684" height="302" key="GridCell.Tab.0.center" timestamp="1618284398151">
+    <state x="1142" y="149" key="CommitChangelistDialog2/0.23.1920.1057@0.23.1920.1057" timestamp="1618284765399" />
+    <state width="684" height="302" key="GridCell.Tab.0.bottom" timestamp="1618285727897">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="684" height="302" key="GridCell.Tab.0.center/0.23.1920.1057@0.23.1920.1057" timestamp="1618284398151" />
-    <state width="684" height="302" key="GridCell.Tab.0.left" timestamp="1618284398151">
+    <state width="684" height="302" key="GridCell.Tab.0.bottom/0.23.1920.1057@0.23.1920.1057" timestamp="1618285727897" />
+    <state width="684" height="302" key="GridCell.Tab.0.center" timestamp="1618285727896">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="684" height="302" key="GridCell.Tab.0.left/0.23.1920.1057@0.23.1920.1057" timestamp="1618284398151" />
-    <state width="684" height="302" key="GridCell.Tab.0.right" timestamp="1618284398151">
+    <state width="684" height="302" key="GridCell.Tab.0.center/0.23.1920.1057@0.23.1920.1057" timestamp="1618285727896" />
+    <state width="684" height="302" key="GridCell.Tab.0.left" timestamp="1618285727895">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="684" height="302" key="GridCell.Tab.0.right/0.23.1920.1057@0.23.1920.1057" timestamp="1618284398151" />
+    <state width="684" height="302" key="GridCell.Tab.0.left/0.23.1920.1057@0.23.1920.1057" timestamp="1618285727895" />
+    <state width="684" height="302" key="GridCell.Tab.0.right" timestamp="1618285727896">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state width="684" height="302" key="GridCell.Tab.0.right/0.23.1920.1057@0.23.1920.1057" timestamp="1618285727896" />
   </component>
 </project>
